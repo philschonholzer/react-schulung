@@ -9,11 +9,6 @@
   "dependencies": {
     "@slidev/cli": "^0.43.7",
     "@slidev/theme-default": "latest",
-    "@slidev/theme-seriph": "latest",
-    "vue": "^3.3.4"
-  },
-  "devDependencies": {
-    "@unocss/reset": "^0.56.5",
-    "postcss": "^8.4.31"
+    "@slidev/theme-seriph": "latest"
   }
 }
