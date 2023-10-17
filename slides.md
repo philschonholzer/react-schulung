@@ -358,15 +358,19 @@ export default function Counter() {
   const [count, setCount] = useState(0)
   const inc = () => setCount((prev) => prev + 1)
   const dec = () => setCount((prev) => prev - 1)
+  const oneMore = count + 1
   return (
     <div>
       <button onClick={inc}>+</button>
       <button onClick={dec}>-</button>
       <div>Count: {count}</div>
+      <div>One higher: {oneMore}</div>
     </div>
   )
 }
 ```
+
+
 ---
 transition: fade-out
 ---
@@ -512,23 +516,25 @@ const CounterUsingGlobalStore = () => {
 
 <div v-click>
 
-```tsx
-export const useCustomers = useQuery({
-  queryKey: ['customerData'],
-  queryFn: () =>
-    fetch('/api/customers')
-      .then((res) => res.json()),
-})
+```ts
+import { useQuery } from '@tanstack/react-query'
+
+const queryFn = () => 
+  fetch('/api/customers').then((res) => res.json())
+export const useCustomers = () =>
+  useQuery({ queryKey: ['customerData'], queryFn })
 ```
 
 ```tsx
+import { useCustomer } from './use-customer'
+
 function Example() {
   const { isLoading, error, data } = useCustomers()
 
   if (isLoading) return 'Loading...'
 
-  if ({message}) 
-    return `An error has occurred: ${message}`
+  if ({error}) 
+    return `An error has occurred: ${error}`
 
   return (
     <div>
@@ -618,6 +624,7 @@ Fix-Fertige UI-Elemente, welche direkt genutzt werden können, wie Date-Picker, 
 | Sicherheit | Extrem hoch | Datenquelle muss sicher sein |
 | Energiebedarf kleiner | Je weniger Änderungen  | Je weniger Anfragen oder CPU |
 | Verfügbarkeit | Extrem hoch  | Ist schwieriger zu gewährleisten |
+
 
 ---
 
