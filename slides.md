@@ -41,6 +41,17 @@ The last comment block of each slide will be treated as slide notes. It will be 
 -->
 
 ---
+
+# Philip Schönholzer
+
+- Entwickler bei Apptiva
+- Fokus Requirements-Engineering und UX
+- In den letzten 8 Jahren an über 10 React-Projekten gearbeitet
+- Wohnhaft in Luzern
+- Verheiratet, ohne Kinder
+- Meine aktuelle Leidenschaft ist Sim-Racing
+
+---
 layout: default
 ---
 
@@ -569,7 +580,7 @@ Fix-Fertige UI-Elemente, welche direkt genutzt werden können, wie Date-Picker, 
 - Co-Location
 - Bei Apptiva hat (fast) jedes Projekt folgende Ordner
   - `modules` oder `domain` - Business-Logik
-  - `adapters` - Schnittstellen (DB, Email, third party APIs, usw.)
+  - `adapters` - Schnittstellen (eigene Endpoints, third party APIs, usw.)
   - `components` - Globale Komponenten wie z.B. UI-Elemente
   - `scenes`, `pages` oder `app` - Aufteilung der Seiten/Szenen mit ihren spezifischen Komponenten (Abhängig vom Framework) 
 
