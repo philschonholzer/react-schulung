@@ -526,7 +526,7 @@ export const useCustomers = () =>
 ```
 
 ```tsx
-import { useCustomer } from './use-customer'
+import { useCustomers } from './use-customer'
 
 function Example() {
   const { isLoading, error, data } = useCustomers()
