@@ -476,11 +476,10 @@ export default useCounter
 counter-using-global-store.tsx
 
 ```tsx
-import useCounterStore from './counterStore';
+import useCounter from './counterStore';
 
 const CounterUsingGlobalStore = () => {
-  const { count, increment, decrement } = 
-    useCounterStore();
+  const { count, increment, decrement } = useCounter();
 
   return (
     <div>
@@ -612,7 +611,7 @@ Fix-Fertige UI-Elemente, welche direkt genutzt werden können, wie Date-Picker, 
 
 |                 | SSG             | SSR             |
 |-----------------|-----------------|-----------------|
-| Bedeutet        | Server Side Generated | Server Side Rendered |
+| Bedeutet        | Static Site Generated | Server Side Rendered |
 | HTML-Generierung | Zur Build-Zeit | Auf Anfrage (+ Cache) |
 | TTFP (first paint) | Extrem schnell | Abhängig vom Daten- und Rechenbedarf  |
 | Inhaltl. Änderungen  | Neuer Build der Seite oder Seiten nötig | Mit der nächsten Anfrage  |
